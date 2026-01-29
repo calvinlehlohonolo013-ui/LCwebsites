@@ -1069,6 +1069,47 @@
 		   min-height: 280px;
           }
        }
+
+
+		     	@media (max-width: 768px) {
+
+			  .container {
+				padding: 0 1rem;
+			  }
+
+			  .navbar {
+				padding: 0.9rem 0;
+			  }
+
+			  .nav-menu {
+				display: flex;
+				gap: 1rem;
+				overflow-x: auto;
+				white-space: nowrap;
+				-webkit-overflow-scrolling: touch;
+			  }
+
+			  .nav-menu::-webkit-scrollbar {
+				display: none;
+			  }
+
+			  .nav-link {
+				font-size: 0.95rem;
+				padding: 0.35rem 0.2rem;
+			  }
+
+			  .contact-btn {
+				padding: 0.65rem 1rem;
+				font-size: 0.95rem;
+			  }
+
+			  .hero-title {
+				font-size: clamp(2.2rem, 9vw, 3.2rem);
+				line-height: 1.05;
+				padding: 0 0.5rem;
+				word-break: break-word;
+			  }
+			}
             
             
             .portfolio-grid,
@@ -1809,6 +1850,7 @@
 </body>
 
 </html>
+
 
 
 
