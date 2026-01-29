@@ -1048,44 +1048,27 @@
             }
         }
         
-        @media (max-width: 768px) {
-		   .navbar {
-		     padding: 0.8rem 0;
-		   }
-		
-		   .nav-container {
-		     flex-direction: column;     
-		     align-items: center;
-		     gap: 0.8rem;
-		   }
-		
-		   .logo {
-		     justify-content: center;
-		   }
-		
-		   .nav-menu {
-		     display: flex;              
-		     width: 100%;              
-		     justify-content: center;    
-		     flex-wrap: wrap;            
-		     gap: 0.6rem 1rem;           
-			padding: 0.3rem 0;
-		   }
-		
-		   .nav-link {
-		     font-size: 0.95rem;        
-		     padding: 0.4rem 0.2rem;     
-		   }
-		
-		   .contact-btn {
-		     width: 100%;
-	         max-width: 260px;
-		     text-align: center;
-		     padding: 0.75rem 1rem;
-		  }
-		
+         @media (max-width: 768px) {
+          .modal {
+		  align-items: flex-start;
+			padding: 1rem;
 		 }
 
+		.modal-content {
+		  max-height: 100dvh;
+		 }
+
+		 .modal-body {
+		   max-height: calc(100dvh - 90px);
+		   overflow-y: auto;
+		  -webkit-overflow-scrolling: touch;
+		 }
+
+		  .website-preview {
+		   height: 55dvh;
+		   min-height: 280px;
+          }
+       }
             
             
             .portfolio-grid,
@@ -1826,6 +1809,7 @@
 </body>
 
 </html>
+
 
 
 
