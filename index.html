@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LC Websites | Premium Web Development Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
@@ -22,138 +22,126 @@
             --text-light: #f1f5f9;
             --text-muted: #94a3b8;
         }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-            color: var(--text-light);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        
-        /* Premium Header */
-        .navbar {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--glass-border);
-            z-index: 1000;
-            padding: 1.5rem 0;
-        }
-        
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            text-decoration: none;
-        }
-        
-        .logo-badge {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, var(--electric-purple), var(--hot-pink));
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 900;
-            font-size: 1.8rem;
-            color: white;
-        }
-        
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .logo-main {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 900;
-            background: linear-gradient(to right, var(--white), var(--soft-pink));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .logo-tagline {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            letter-spacing: 0.5px;
-        }
-        
-        .nav-menu {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-        }
-        
-        .nav-link {
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            position: relative;
-            padding: 0.5rem 0;
-        }
-        
-        .nav-link:hover {
-            color: var(--soft-pink);
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: linear-gradient(to right, var(--electric-purple), var(--hot-pink));
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        .contact-btn {
-            background: linear-gradient(135deg, var(--electric-purple), var(--hot-pink));
-            color: white;
-            padding: 0.8rem 2rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .contact-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(219, 39, 119, 0.4);
-        }
+        /* Prevent horizontal issues on mobile */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Better container spacing for small screens */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* Navbar adjustments */
+.navbar {
+  padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.8rem 0;
+  }
+}
+
+/* Make nav wrap nicely and avoid squishing */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Logo scales better on small screens */
+@media (max-width: 768px) {
+  .logo-badge {
+    width: 42px;
+    height: 42px;
+    font-size: 1.5rem;
+  }
+
+  .logo-main {
+    font-size: 1.3rem;
+  }
+
+  .logo-tagline {
+    font-size: 0.75rem;
+  }
+}
+
+/* Desktop nav stays the same */
+.nav-menu {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+
+/* Add a hamburger button (you will add HTML for it below) */
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--glass-border);
+  background: rgba(255,255,255,0.06);
+  border-radius: 10px;
+  color: var(--text-light);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+/* On mobile: hide links by default, show hamburger */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none; /* hidden until opened */
+    flex-direction: column;
+    gap: 0;
+    padding: 0.8rem 1rem 1rem;
+    background: rgba(15, 23, 42, 0.98);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--glass-border);
+  }
+
+  /* When menu is opened */
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-menu li {
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    width: 100%;
+    padding: 0.9rem 0.2rem;
+  }
+
+  .contact-btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+    padding: 0.9rem 1rem;
+  }
+}
+
         
         /* WhatsApp Floating Button */
         .whatsapp-float {
@@ -1811,5 +1799,6 @@
 </body>
 
 </html>
+
 
 
