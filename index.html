@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LC Websites | Premium Web Development Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* Premium Purple-Pink Theme for Major Company */
+        :root {
+            --deep-purple: #6b21a8;
+            --electric-purple: #7c3aed;
+            --hot-pink: #db2777;
+            --soft-pink: #ec4899;
+            --light-pink: #fdf2f8;
+            --dark-bg: #0f172a;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --white: #ffffff;
+            --text-light: #f1f5f9;
+            --text-muted: #94a3b8;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        /* Premium Header */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 1000;
+            padding: 1.5rem 0;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
+        
+        .logo-badge {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--electric-purple), var(--hot-pink));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.8rem;
+            color: white;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-main {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: linear-gradient(to right, var(--white), var(--soft-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .logo-tagline {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+        
+        .nav-link {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+        
+        .nav-link:hover {
+            color: var(--soft-pink);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(to right, var(--electric-purple), var(--hot-pink));
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .contact-btn {
+            background: linear-gradient(135deg, var(--electric-purple), var(--hot-pink));
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(219, 39, 119, 0.4);
+        }
+        
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+        }
+        
+        .whatsapp-float i {
+            margin-top: 2px;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        /* About Us Section */
+        .about {
+            padding: 8rem 0;
+            background: rgba(15, 23, 42, 0.7);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        
+        .about-text h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            background: linear-gradient(to right, var(--white), var(--soft-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .about-text p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-item {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            border-color: var(--soft-pink);
+            transform: translateY(-5px);
+        }
+        
+        .feature-item i {
+            font-size: 2rem;
+            color: var(--soft-pink);
+            margin-bottom: 1rem;
+        }
+        
+        .feature-item h4 {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+        }
+        
+        .about-image {
+            background: linear-gradient(135deg, var(--electric-purple), var(--hot-pink));
+            border-radius: 20px;
+            height: 100%;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.3;
+        }
+        
+        .about-image-text {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .about-image-text h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        /* New Hero Section - ADDED AS REQUESTED */
+        .hero {
+            padding: 12rem 0 8rem;
+            position: relative;
+            overflow: hidden;
+            margin-top: 80px;
+        }
+        
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(107, 33, 168, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(219, 39, 119, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(124, 58, 237, 0.15) 0%, transparent 50%);
+            z-index: -1;
+        }
+        
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .hero-badge {
+            display: inline-block;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            padding: 0.6rem 1.8rem;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            color: var(--soft-pink);
+            margin-bottom: 2.5rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        
+        .hero-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4.5rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, var(--white), var(--soft-pink), var(--electric-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.8rem;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            line-height: 1.4;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            background: linear-gradient(135deg, var(--electric-purple), var(--hot-pink));
+            color: white;
+            padding: 1rem 3rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(219, 39, 119, 0.4);
+        }
+        
+        /* Original Hero Section (now below the new one) */
+        .original-hero {
+            padding: 6rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .original-hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(107, 33, 168, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(219, 39, 119, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(124, 58, 237, 0.1) 0%, transparent 50%);
+            z-index: -1;
+        }
+        
+        .original-hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .original-hero-badge {
+            display: inline-block;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: var(--soft-pink);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+        
+        .original-hero-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, var(--white), var(--soft-pink), var(--electric-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .original-hero-subtitle {
+            font-size: 1.8rem;
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            line-height: 1.4;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .original-hero-description {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 4rem;
+            line-height: 1.8;
+        }
+        
+        /* Portfolio Section - Premium */
+        .portfolio {
+            padding: 6rem 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+        
+        .section-label {
+            display: inline-block;
+            color: var(--soft-pink);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.9rem;
+        }
+        
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(to right, var(--white), var(--soft-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        
+        .project-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-15px);
+            border-color: var(--glass-border);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+        }
+        
+        .project-image {
+            height: 250px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+        
+        .project-card:hover .project-image img {
+            transform: scale(1.1);
+        }
+        
+        .project-content {
+            padding: 2.5rem;
+        }
+        
+        .project-type {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--electric-purple), var(--hot-pink));
+            color: white;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+        
+        .project-description {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .tag {
+            background: rgba(124, 58, 237, 0.15);
+            color: var(--electric-purple);
+            padding: 0.4rem 1rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            padding: 8rem 0;
+            background: rgba(15, 23, 42, 0.7);
+        }
+        
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .faq-item:hover {
+            border-color: var(--soft-pink);
+        }
+        
+        .faq-question {
+            padding: 2rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-light);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-question i {
+            color: var(--soft-pink);
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-answer {
+            padding: 0 2rem 2rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            display: none;
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+        
+        .demo-badge {
+            display: inline-block;
+            background: rgba(255, 193, 7, 0.15);
+            color: #ffc107;
+            padding: 0.4rem 1rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        
+        .real-badge {
+            display: inline-block;
+            background: rgba(76, 175, 80, 0.15);
+            color: #4caf50;
+            padding: 0.4rem 1rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        
+        /* Services Section - Premium with Detailed Explanations */
+        .services {
+            padding: 8rem 0;
+            background: rgba(15, 23, 42, 0.7);
+            position: relative;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+        
+        .service-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 3rem;
+            transition: all 0.4s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--soft-pink);
+            box-shadow: 0 20px 40px rgba(219, 39, 119, 0.15);
+        }
+        
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--electric-purple), var(--hot-pink));
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: white;
+            margin-bottom: 2rem;
+        }
+        
+        .service-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-description {
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+        
+        .service-list {
+            list-style: none;
+        }
+        
+        .service-list li {
+            padding: 0.8rem 0;
+            color: var(--text-muted);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .service-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .service-list li i {
+            color: var(--soft-pink);
+            font-size: 1rem;
+            min-width: 20px;
+        }
+        
+        /* Pricing Section - Premium */
+        .pricing {
+            padding: 8rem 0;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+        
+        .price-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 3.5rem 3rem;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+        
+        .price-card.featured {
+            border: 2px solid var(--soft-pink);
+            transform: scale(1.05);
+            position: relative;
+        }
+        
+        .price-card.featured::before {
+            content: 'RECOMMENDED';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--electric-purple), var(--hot-pink));
+            color: white;
+            padding: 0.6rem 2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .price-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: var(--text-light);
+        }
+        
+        .price-amount {
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(to right, var(--soft-pink), var(--electric-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 2rem 0;
+        }
+        
+        /* E-commerce Section */
+        .ecommerce {
+            padding: 8rem 0;
+            background: rgba(15, 23, 42, 0.7);
+        }
+        
+        .ecommerce-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+        
+        .ecommerce-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+        }
+        
+        .ecommerce-price {
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(to right, var(--soft-pink), var(--electric-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 1.5rem 0;
+        }
+        
+        .ecommerce-range {
+            font-size: 1.5rem;
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+        
+        /* Extra Services */
+        .extra-services {
+            padding: 8rem 0;
+        }
+        
+        .extra-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+        
+        .extra-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .extra-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--soft-pink);
+        }
+        
+        .extra-title {
+            font-size: 1.5rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+        }
+        
+        .extra-price {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(to right, var(--soft-pink), var(--electric-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.98);
+            backdrop-filter: blur(20px);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+        }
+        
+        .modal-content {
+            background: var(--card-bg);
+            backdrop-filter: blur(30px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            width: 100%;
+            max-width: 1200px;
+            max-height: 90vh;
+            overflow: hidden;
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.5);
+        }
+        
+        .modal-header {
+            padding: 2rem 3rem;
+            border-bottom: 1px solid var(--glass-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-light);
+        }
+        
+        .close-modal {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 2rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .close-modal:hover {
+            color: var(--soft-pink);
+        }
+        
+        .modal-body {
+            padding: 3rem;
+            overflow-y: auto;
+            max-height: calc(90vh - 80px);
+        }
+        
+        .website-preview {
+            width: 100%;
+            height: 500px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 2.5rem;
+            border: 1px solid var(--glass-border);
+        }
+        
+        .website-preview iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(15, 23, 42, 0.95);
+            border-top: 1px solid var(--glass-border);
+            padding: 6rem 0 3rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+        
+        .footer-logo {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .footer-logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 900;
+            background: linear-gradient(to right, var(--white), var(--soft-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .footer-tagline {
+            font-style: italic;
+            color: var(--text-muted);
+            line-height: 1.6;
+            font-size: 1.1rem;
+        }
+        
+        .footer-links h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1.8rem;
+            color: var(--text-light);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-size: 1.05rem;
+        }
+        
+        .footer-links a:hover {
+            color: var(--soft-pink);
+            transform: translateX(5px);
+        }
+        
+        .footer-contact p {
+            color: var(--text-muted);
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.05rem;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 3rem;
+            border-top: 1px solid var(--glass-border);
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-title {
+                font-size: 3.5rem;
+            }
+            
+            .original-hero-title {
+                font-size: 3rem;
+            }
+            
+            .section-title {
+                font-size: 3rem;
+            }
+            
+            .price-card.featured {
+                transform: none;
+            }
+            
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .about-image {
+                min-height: 300px;
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 8rem 0 5rem;
+            }
+            
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .original-hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .original-hero-subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+            
+            .portfolio-grid,
+            .services-grid,
+            .pricing-grid,
+            .ecommerce-grid,
+            .extra-grid,
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .price-amount,
+            .ecommerce-price {
+                font-size: 3rem;
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                bottom: 20px;
+                right: 20px;
+                font-size: 24px;
+            }
+            
+            .about-text h2 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Premium Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-badge">LC</div>
+                <div class="logo-text">
+                    <div class="logo-main">WEBSITES</div>
+                    <div class="logo-tagline">Enterprise Web Solutions</div>
+                </div>
+            </a>
+            
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <a href="#contact" class="contact-btn">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/27695698096?text=Hi%20LC%20Websites!%20I'm%20interested%20in%20building%20a%20website.%20Can%20we%20chat?" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- NEW Hero Section - ADDED AS REQUESTED -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="container hero-content">
+            <span class="hero-badge">Premium Web Development</span>
+            <h1 class="hero-title">Transforming Vision Into Digital Excellence</h1>
+            <p class="hero-subtitle">Professional web solutions that drive business growth. We create stunning, high-performance websites tailored to your unique needs.</p>
+            <a href="#portfolio" class="cta-button">View Our Work</a>
+        </div>
+    </section>
+
+    <!-- Original Hero Section (Kept everything else the same) -->
+    <section class="original-hero" id="home">
+        <div class="original-hero-bg"></div>
+        <div class="container original-hero-content">
+            <span class="original-hero-badge">Enterprise Web Development</span>
+            <h1 class="original-hero-title">LC Websites</h1>
+            <div class="original-hero-subtitle">Websites that work—turning ideas into websites, your vision in our code, bringing your business online.</div>
+            <p class="original-hero-description">Professional web development services creating premium, high-performance websites that drive business growth and establish digital excellence.</p>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">About Us</span>
+                <h2 class="section-title">Your Partner in Digital Success</h2>
+                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.2rem;">Learn more about our mission, values, and what makes us different.</p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Who We Are</h2>
+                    <p>LC Websites is a premium web development agency dedicated to transforming businesses through exceptional digital solutions. Founded with a passion for innovation and a commitment to excellence, we specialize in creating websites that not only look stunning but also deliver measurable results.</p>
+                    
+                    <p>Our team combines technical expertise with creative vision to build websites that stand out in today's competitive digital landscape. We believe that every business deserves a powerful online presence, and we're here to make that happen.</p>
+                    
+                    <p>At LC Websites, we don't just build websites—we build digital experiences that connect with your audience, showcase your brand, and drive business growth. From small startups to established enterprises, we tailor our approach to meet your unique needs and goals.</p>
+                    
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-bullseye"></i>
+                            <h4>Our Mission</h4>
+                            <p>To empower businesses with cutting-edge web solutions that drive growth and success in the digital world.</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <i class="fas fa-eye"></i>
+                            <h4>Our Vision</h4>
+                            <p>To be the leading web development partner for businesses seeking transformative digital experiences.</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <i class="fas fa-handshake"></i>
+                            <h4>Our Values</h4>
+                            <p>Quality, innovation, transparency, and client success drive everything we do.</p>
+                        </div>
+                        
+                        <div class="feature-item">
+                            <i class="fas fa-users"></i>
+                            <h4>Our Approach</h4>
+                            <p>Collaborative, client-focused, and results-driven methodology for every project.</p>
+                        </div>
+                    </div>
+                </div>
+                
+					  <div class="about-image" style="background-image: url('hloni.JPG'); background-size: cover; background-position: center; min-height: 400px;">
+			<div class="about-image-text">
+				<h3>LC Websites</h3>
+				<p style="color: white; font-size: 1.2rem;">Turning your vision into digital reality</p>
+			</div>
+			</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Portfolio</span>
+                <h2 class="section-title">Our Featured Work</h2>
+                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.2rem;">Premium websites we've created for clients across industries.</p>
+            </div>
+            
+            <div class="portfolio-grid" id="projectsContainer">
+                <!-- Projects will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Information</span>
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.2rem;">Get answers to common questions about our portfolio and services.</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Which portfolio projects are real client websites?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>In our portfolio, we showcase both real client projects and conceptual demonstrations to illustrate our capabilities:</p>
+                        <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                            <li><strong>Real Client Projects:</strong> We have successfully delivered websites for various businesses including Tech Solutions Corp and Creative Agency Portfolio. These represent actual client work with measurable results.</li>
+                            <li><strong>Concept Demonstrations:</strong> Projects like "Boutique Fashion Store," "Educational Platform," and "Wellness Center Platform" are interactive demonstrations that showcase what we can build for similar businesses in your industry.</li>
+                        </ul>
+                        <p style="margin-top: 1rem;">The demonstration projects are fully functional previews that allow you to experience the quality and features we can deliver for your specific needs.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        What's the difference between demo and real projects?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We maintain transparency about our portfolio composition:</p>
+                        <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                            <li><strong>Real Projects <span class="real-badge">LIVE</span>:</strong> These are actual client websites that are currently live and operational. They represent completed work with real businesses.</li>
+                            <li><strong>Demo Projects <span class="demo-badge">DEMO</span>:</strong> These are fully functional concept demonstrations that show our capabilities for specific industries. They're designed to give you a realistic preview of what we can create for your business.</li>
+                        </ul>
+                        <p style="margin-top: 1rem;">All projects, whether real or conceptual, demonstrate the same level of quality, attention to detail, and technical excellence that we deliver to every client.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        Can you create a website like the demo projects for my business?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely! The demonstration projects serve as templates of what we can achieve for your business. Here's how it works:</p>
+                        <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                            <li><strong>Customization:</strong> We can adapt any demonstration to match your specific brand, content, and business requirements.</li>
+                            <li><strong>Industry Adaptation:</strong> Whether you need an e-commerce store, educational platform, or wellness center website, we can build it with the features demonstrated.</li>
+                            <li><strong>Enhanced Features:</strong> We can add or modify features based on your unique needs beyond what's shown in the demos.</li>
+                        </ul>
+                        <p style="margin-top: 1rem;">The demonstrations are starting points - we work with you to create a website that perfectly represents your brand and meets your business objectives.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        How do I get started with my own website project?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Starting your website project with us is straightforward:</p>
+                        <ol style="margin-top: 1rem; padding-left: 1.5rem;">
+                            <li><strong>Initial Consultation:</strong> Contact us to discuss your project requirements, timeline, and budget.</li>
+                            <li><strong>Proposal:</strong> We provide a detailed proposal based on your needs, referencing similar projects from our portfolio.</li>
+                            <li><strong>Design Phase:</strong> We create custom designs for your approval, incorporating your brand identity.</li>
+                            <li><strong>Development:</strong> Our team builds your website with regular updates and opportunities for feedback.</li>
+                            <li><strong>Launch & Support:</strong> We launch your website and provide ongoing support and maintenance.</li>
+                        </ol>
+                        <p style="margin-top: 1rem;">Ready to begin? <a href="#contact" style="color: var(--soft-pink); text-decoration: none;">Contact us today</a> for a free consultation and quote.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section with Detailed Explanations -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Our Expertise</span>
+                <h2 class="section-title">We Build All Types of Websites</h2>
+                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.2rem;">Comprehensive web solutions tailored to your business needs.</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Business Websites -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3 class="service-title">Business Websites</h3>
+                    <p class="service-description">Professional websites designed to establish your brand identity and convert visitors into customers with a strong online presence.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Custom Brand Design</li>
+                        <li><i class="fas fa-check"></i> SEO Optimization</li>
+                        <li><i class="fas fa-check"></i> Contact & Inquiry Forms</li>
+                        <li><i class="fas fa-check"></i> Google Analytics Integration</li>
+                        <li><i class="fas fa-check"></i> Mobile Responsive Design</li>
+                        <li><i class="fas fa-check"></i> Social Media Integration</li>
+                    </ul>
+                </div>
+                
+                <!-- E-commerce Stores -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3 class="service-title">Online Stores (E-commerce)</h3>
+                    <p class="service-description">Complete online shopping platforms with secure payment processing, inventory management, and customer accounts.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Product Catalog Management</li>
+                        <li><i class="fas fa-check"></i> Secure Payment Gateways</li>
+                        <li><i class="fas fa-check"></i> Shopping Cart & Checkout</li>
+                        <li><i class="fas fa-check"></i> Inventory Tracking System</li>
+                        <li><i class="fas fa-check"></i> Order Management Dashboard</li>
+                        <li><i class="fas fa-check"></i> Customer Account System</li>
+                    </ul>
+                </div>
+                
+                <!-- Portfolio Websites -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <h3 class="service-title">Portfolio Websites</h3>
+                    <p class="service-description">Showcase your work, skills, and achievements with stunning visual galleries and professional presentation.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Visual Project Galleries</li>
+                        <li><i class="fas fa-check"></i> Skills & Experience Display</li>
+                        <li><i class="fas fa-check"></i> Client Testimonials</li>
+                        <li><i class="fas fa-check"></i> Downloadable Resume/CV</li>
+                        <li><i class="fas fa-check"></i> Contact Form Integration</li>
+                        <li><i class="fas fa-check"></i> Social Proof Integration</li>
+                    </ul>
+                </div>
+                
+                <!-- Booking Websites -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3 class="service-title">Booking Websites</h3>
+                    <p class="service-description">Advanced booking and appointment systems for service-based businesses with real-time scheduling.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Online Appointment Scheduling</li>
+                        <li><i class="fas fa-check"></i> Calendar Integration</li>
+                        <li><i class="fas fa-check"></i> Automated Email & SMS Reminders</li>
+                        <li><i class="fas fa-check"></i> Payment Processing for Bookings</li>
+                        <li><i class="fas fa-check"></i> Customer Management System</li>
+                        <li><i class="fas fa-check"></i> Service Provider Dashboards</li>
+                    </ul>
+                </div>
+                
+                <!-- Landing Pages -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <h3 class="service-title">Landing Pages</h3>
+                    <p class="service-description">High-converting single-page websites designed specifically for marketing campaigns and lead generation.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Conversion-Focused Design</li>
+                        <li><i class="fas fa-check"></i> Lead Capture Forms</li>
+                        <li><i class="fas fa-check"></i> Call-to-Action Optimization</li>
+                        <li><i class="fas fa-check"></i> A/B Testing Integration</li>
+                        <li><i class="fas fa-check"></i> Fast Loading Speed</li>
+                        <li><i class="fas fa-check"></i> Analytics & Tracking</li>
+                    </ul>
+                </div>
+                
+                <!-- Restaurant/Menu Websites -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="service-title">Restaurant/Menu Websites</h3>
+                    <p class="service-description">Complete restaurant solutions with online menus, table reservations, and food ordering capabilities.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Digital Menu Display</li>
+                        <li><i class="fas fa-check"></i> Online Table Reservation System</li>
+                        <li><i class="fas fa-check"></i> Food Delivery Integration</li>
+                        <li><i class="fas fa-check"></i> Opening Hours & Location</li>
+                        <li><i class="fas fa-check"></i> Special Offers & Promotions</li>
+                        <li><i class="fas fa-check"></i> Customer Reviews System</li>
+                    </ul>
+                </div>
+                
+                <!-- Educational Websites -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 class="service-title">Educational Websites</h3>
+                    <p class="service-description">Learning management systems and educational platforms for schools, courses, and online learning.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Course Management System</li>
+                        <li><i class="fas fa-check"></i> Student Registration Portal</li>
+                        <li><i class="fas fa-check"></i> Progress Tracking Dashboard</li>
+                        <li><i class="fas fa-check"></i> Payment Processing for Courses</li>
+                        <li><i class="fas fa-check"></i> Instructor Management</li>
+                    </ul>
+                </div>
+                
+                <!-- Blog Websites -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-blog"></i>
+                    </div>
+                    <h3 class="service-title">Blog Websites</h3>
+                    <p class="service-description">Content publishing platforms with advanced blogging features, categories, and reader engagement tools.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Content Management System</li>
+                        <li><i class="fas fa-check"></i> Category & Tag Organization</li>
+                        <li><i class="fas fa-check"></i> Comment & Discussion System</li>
+                        <li><i class="fas fa-check"></i> Social Sharing Integration</li>
+                        <li><i class="fas fa-check"></i> Newsletter Subscription</li>
+                        <li><i class="fas fa-check"></i> Author Profile Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Pricing</span>
+                <h2 class="section-title">Website Prices</h2>
+                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.2rem;">Transparent pricing for premium website development.</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="price-card">
+                    <h3 class="price-title">1 – 3 Pages Website</h3>
+                    <div class="price-amount">R2500</div>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem;">Perfect for small businesses and startups.</p>
+                    <a href="#contact" class="contact-btn" style="display: inline-block;">Get Started</a>
+                </div>
+                
+                <div class="price-card featured">
+                    <h3 class="price-title">3 – 5 Pages Website</h3>
+                    <div class="price-amount">R3200</div>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem;">Most popular choice for growing businesses.</p>
+                    <a href="#contact" class="contact-btn" style="display: inline-block;">Get Started</a>
+                </div>
+                
+                <div class="price-card">
+                    <h3 class="price-title">5 – 8 Pages Website</h3>
+                    <div class="price-amount">R8500</div>
+                    <p style="color: var(--text-muted); margin-bottom: 2rem;">Comprehensive solution for established businesses.</p>
+                    <a href="#contact" class="contact-btn" style="display: inline-block;">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- E-commerce Section -->
+    <section class="ecommerce">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">E-commerce</span>
+                <h2 class="section-title">Online Store (E-commerce)</h2>
+                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.2rem;">Premium e-commerce solutions for your online business.</p>
+            </div>
+            
+            <div class="ecommerce-grid">
+                <div class="ecommerce-card">
+                    <div class="ecommerce-range">1 – 20 Products</div>
+                    <div class="ecommerce-price">R5500</div>
+                    <p style="color: var(--text-muted);">Perfect for small online stores</p>
+                </div>
+                
+                <div class="ecommerce-card">
+                    <div class="ecommerce-range">20 – 60 Products</div>
+                    <div class="ecommerce-price">R7500</div>
+                    <p style="color: var(--text-muted);">Ideal for growing e-commerce</p>
+                </div>
+                
+                <div class="ecommerce-card">
+                    <div class="ecommerce-range">60 + Products</div>
+                    <div class="ecommerce-price">R10 000+</div>
+                    <p style="color: var(--text-muted);">Enterprise e-commerce solutions</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Extra Services -->
+    <section class="extra-services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Additional Services</span>
+                <h2 class="section-title">Extra Services</h2>
+                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.2rem;">Enhance your website with our premium add-ons.</p>
+            </div>
+            
+            <div class="extra-grid">
+                <div class="extra-card">
+                    <h3 class="extra-title">Domain + Hosting Setup</h3>
+                    <div class="extra-price">R350</div>
+                    <p style="color: var(--text-muted); margin-top: 1rem;">Complete setup and configuration</p>
+                </div>
+                
+                <div class="extra-card">
+                    <h3 class="extra-title">Business Email Setup</h3>
+                    <div class="extra-price">R300</div>
+                    <p style="color: var(--text-muted); margin-top: 1rem;">Professional email accounts</p>
+                </div>
+                
+                <div class="extra-card">
+                    <h3 class="extra-title">Logo Design</h3>
+                    <div class="extra-price">R250</div>
+                    <p style="color: var(--text-muted); margin-top: 1rem;">Custom logo creation</p>
+                </div>
+                
+                <div class="extra-card">
+                    <h3 class="extra-title">Website Redesign/Fixing</h3>
+                    <div class="extra-price">From R800</div>
+                    <p style="color: var(--text-muted); margin-top: 1rem;">Website updates and fixes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal" id="websiteModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle">Website Preview</h3>
+                <button class="close-modal" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="website-preview">
+                    <iframe id="websiteFrame" src="" title="Website Preview"></iframe>
+                </div>
+                <div id="websiteDescription"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="footer-logo-text">LC WEBSITES</div>
+                    <p class="footer-tagline">Websites that work—turning ideas into websites, your vision in our code, bringing your business online.</p>
+                    <p style="color: var(--text-muted);">Enterprise web development solutions for businesses that demand excellence.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-envelope"></i> calvinlehlohonolo013@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> 069 569 8096</p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/27695698096" style="color: var(--text-muted); text-decoration: none;">WhatsApp: 069 569 8096</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> South Africa</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 9am-6pm | Sat: 9am-1pm</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy;LC Websites. All rights reserved. | Portfolio includes both real client projects and conceptual demonstrations.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Portfolio Data with REAL WORKING demo websites
+        const projects = [
+            
+          
+            {
+                id: 3,
+                title: "dire-coatings",
+                type: "e-commerce",
+                description: "painting store, e-commerce.",
+                image: "paints.PNG",
+                websiteUrl: "https://dire-coatings.store",
+                tags: ["Creative", "painting store", "e-commerce"],
+                isDemo: false
+            },
+            {
+                id: 4,
+                title: "Wellness Center Platform",
+                type: "Booking Website",
+                description: "Complete wellness platform with practitioner scheduling and class bookings.",
+                image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+                websiteUrl: " https://demo.wellnessliving.com", // WORKING WELLNESS DEMO
+                tags: ["Wellness", "Booking", "Scheduling", "Health"],
+                isDemo: true
+            },
+            {
+                id: 5,
+                title: "proposal-generator",
+                type: "Business Website",
+                description: "Corporate website for technology solutions company with service pages.",
+                image: "prop.PNG",
+                websiteUrl: "https://calvinlehlohonolo013-ui.github.io/proposal-generator",
+                tags: ["Business", "Corporate", "Technology"],
+                isDemo: false
+            },
+            {
+                id: 6,
+                title: "Educational Platform",
+                type: "EnglishHub Pro",
+                description: "Learning management system with courses and student dashboard.",
+                image: "eng.PNG",
+                websiteUrl: "https://calvinlehlohonolo013-ui.github.io/EnglishPro/",
+                tags: ["Education", "Learning", "Courses", "LMS"],
+                isDemo: false
+            }
+        ];
+
+        // DOM Elements
+        const modal = document.getElementById('websiteModal');
+        const closeModalBtn = document.getElementById('closeModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const websiteFrame = document.getElementById('websiteFrame');
+        const websiteDescription = document.getElementById('websiteDescription');
+        
+        // Render Projects
+        function renderProjects() {
+            const container = document.getElementById('projectsContainer');
+            container.innerHTML = '';
+            
+            projects.forEach(project => {
+                const card = document.createElement('div');
+                card.className = 'project-card';
+                
+                card.innerHTML = `
+                    <div class="project-image">
+                        <img src="${project.image}" alt="${project.title}">
+                    </div>
+                    <div class="project-content">
+                        <span class="project-type">${project.type}</span>
+                        <h3 class="project-title">${project.title}
+                            ${project.isDemo ? '<span class="demo-badge">DEMO</span>' : '<span class="real-badge">LIVE</span>'}
+                        </h3>
+                        <p class="project-description">${project.description}</p>
+                        <div class="project-tags">
+                            ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                        </div>
+                        <button class="contact-btn view-project" data-id="${project.id}" style="width: 100%;">
+                            ${project.isDemo ? 'View Demo' : 'View Live Website'} <i class="fas fa-external-link-alt" style="margin-left: 8px;"></i>
+                        </button>
+                    </div>
+                `;
+                
+                container.appendChild(card);
+            });
+            
+            // Add event listeners
+            document.querySelectorAll('.view-project').forEach(button => {
+                button.addEventListener('click', function() {
+                    const projectId = parseInt(this.getAttribute('data-id'));
+                    const project = projects.find(p => p.id === projectId);
+                    
+                    if (project) {
+                        // Check if this is a working demo or placeholder
+                        if (project.isDemo && !project.websiteUrl.includes('your-')) {
+                            openModal(project);
+                        } else if (!project.isDemo && project.websiteUrl.includes('your-')) {
+                            // For placeholder real websites, show a message
+                            alert("This client website is currently being updated. Please check back soon or contact us to see similar work we've done.");
+                        } else {
+                            openModal(project);
+                        }
+                    }
+                });
+            });
+        }
+        
+        // Open Modal
+        function openModal(project) {
+            modalTitle.textContent = project.title + (project.isDemo ? ' (Demo Preview)' : ' (Live Website)');
+            
+            // Set the iframe source
+            websiteFrame.src = project.websiteUrl;
+            
+            websiteDescription.innerHTML = `
+                <div style="background: rgba(124, 58, 237, 0.1); padding: 2rem; border-radius: 16px; margin-bottom: 2.5rem; border: 1px solid rgba(124, 58, 237, 0.2);">
+                    <h4 style="color: var(--text-light); margin-bottom: 1rem; font-size: 1.3rem;">Project Details</h4>
+                    <p style="margin-bottom: 0.5rem;">
+                        <strong style="color: var(--soft-pink);">Type:</strong> ${project.type}
+                        ${project.isDemo ? ' <span class="demo-badge">CONCEPT DEMO</span>' : ' <span class="real-badge">LIVE CLIENT PROJECT</span>'}
+                    </p>
+                    <p style="margin-bottom: 0.5rem;"><strong style="color: var(--soft-pink);">Description:</strong> ${project.description}</p>
+                    <p><strong style="color: var(--soft-pink);">Features:</strong> ${project.tags.join(', ')}</p>
+                    
+                    ${project.isDemo ? `
+                    <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(255, 193, 7, 0.1); border-radius: 8px; border-left: 4px solid #ffc107;">
+                        <p style="color: #ffc107; margin: 0; font-size: 0.9rem;">
+                            <i class="fas fa-info-circle"></i> This is a functional demonstration showcasing our capabilities for similar projects.
+                        </p>
+                    </div>
+                    ` : ''}
+                </div>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="${project.websiteUrl}" target="_blank" style="flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 0.8rem; background: linear-gradient(135deg, var(--electric-purple), var(--hot-pink)); color: white; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem;">
+                        ${project.isDemo ? 'Open Demo in New Tab' : 'Open Website in New Tab'} <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            `;
+            
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // Close Modal
+        function closeModal() {
+            modal.style.display = 'none';
+            websiteFrame.src = '';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Event Listeners
+        closeModalBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) closeModal();
+        });
+        
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const target = document.querySelector(targetId);
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // FAQ Toggle Functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            renderProjects();
+            
+            // FAQ functionality
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close all other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+            
+            // Close modal on Escape
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeModal();
+            });
+        });
+    </script>
+</body>
+</html>
