@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>LC Websites | Premium Web Development Solutions</title>
+    <title>LC Digital Websites, Apps & Digital Solutions</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
     <style>
@@ -266,22 +266,7 @@
             justify-content: center;
             position: relative;
             overflow: hidden;
-        }
-        
-        .about-image::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.3;
-        }
-        
-        .about-image-text {
+        }.about-image-text {
             position: relative;
             z-index: 2;
             text-align: center;
@@ -296,7 +281,32 @@
             margin-bottom: 1rem;
         }
         
-        /* New Hero Section - ADDED AS REQUESTED */
+
+        .developer-mark {
+            width: 96px;
+            height: 96px;
+            margin: 0 auto 1.5rem;
+            border: 2px solid rgba(255,255,255,0.8);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: -2px;
+        }
+        .code-lines {
+            margin-top: 2rem;
+            display: grid;
+            gap: .6rem;
+            color: rgba(255,255,255,.78);
+            font-family: monospace;
+            font-size: .95rem;
+        }
+
+        /* New Hero Section */
         .hero {
             padding: 12rem 0 8rem;
             position: relative;
@@ -498,26 +508,7 @@
             transform: translateY(-15px);
             border-color: var(--glass-border);
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
-        }
-        
-        .project-image {
-            height: 250px;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .project-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-        }
-        
-        .project-card:hover .project-image img {
-            transform: scale(1.1);
-        }
-        
-        .project-content {
+        }.project-card:hover.project-content {
             padding: 2.5rem;
         }
         
@@ -617,7 +608,7 @@
             transform: rotate(180deg);
         }
         
-        .demo-badge {
+        .project-badge {
             display: inline-block;
             background: rgba(255, 193, 7, 0.15);
             color: #ffc107;
@@ -628,20 +619,7 @@
             margin-left: 10px;
             vertical-align: middle;
         }
-        
-        .real-badge {
-            display: inline-block;
-            background: rgba(76, 175, 80, 0.15);
-            color: #4caf50;
-            padding: 0.4rem 1rem;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            margin-left: 10px;
-            vertical-align: middle;
-        }
-        
-        /* Services Section - Premium with Detailed Explanations */
+/* Services Section - Premium with Detailed Explanations */
         .services {
             padding: 8rem 0;
             background: rgba(15, 23, 42, 0.7);
@@ -720,66 +698,7 @@
             font-size: 1rem;
             min-width: 20px;
         }
-        
-        /* Pricing Section - Premium */
-        .pricing {
-            padding: 8rem 0;
-        }
-        
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 4rem;
-        }
-        
-        .price-card {
-            background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: 3.5rem 3rem;
-            text-align: center;
-            transition: all 0.4s ease;
-        }
-        
-        .price-card.featured {
-            border: 2px solid var(--soft-pink);
-            transform: scale(1.05);
-            position: relative;
-        }
-        
-        .price-card.featured::before {
-            content: 'RECOMMENDED';
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: linear-gradient(135deg, var(--electric-purple), var(--hot-pink));
-            color: white;
-            padding: 0.6rem 2rem;
-            border-radius: 50px;
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-        
-        .price-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            color: var(--text-light);
-        }
-        
-        .price-amount {
-            font-size: 4rem;
-            font-weight: 900;
-            background: linear-gradient(to right, var(--soft-pink), var(--electric-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin: 2rem 0;
-        }
+
         
         /* E-commerce Section */
         .ecommerce {
@@ -802,18 +721,7 @@
             padding: 3rem;
             text-align: center;
         }
-        
-        .ecommerce-price {
-            font-size: 3.5rem;
-            font-weight: 900;
-            background: linear-gradient(to right, var(--soft-pink), var(--electric-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin: 1.5rem 0;
-        }
-        
-        .ecommerce-range {
+.ecommerce-range {
             font-size: 1.5rem;
             color: var(--text-muted);
             margin-bottom: 1rem;
@@ -851,17 +759,7 @@
             color: var(--text-light);
             margin-bottom: 1.5rem;
         }
-        
-        .extra-price {
-            font-size: 2.5rem;
-            font-weight: 900;
-            background: linear-gradient(to right, var(--soft-pink), var(--electric-purple));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        /* Modal */
+/* Modal */
         .modal {
             display: none;
             position: fixed;
@@ -1032,12 +930,7 @@
             .section-title {
                 font-size: 3rem;
             }
-            
-            .price-card.featured {
-                transform: none;
-            }
-            
-            .about-content {
+.about-content {
                 grid-template-columns: 1fr;
                 gap: 3rem;
             }
@@ -1138,16 +1031,10 @@
             
             .portfolio-grid,
             .services-grid,
-            .pricing-grid,
             .ecommerce-grid,
             .extra-grid,
             .about-features {
                 grid-template-columns: 1fr;
-            }
-            
-            .price-amount,
-            .ecommerce-price {
-                font-size: 3rem;
             }
             
             .whatsapp-float {
@@ -1171,8 +1058,8 @@
             <a href="#" class="logo">
                 <div class="logo-badge">LC</div>
                 <div class="logo-text">
-                    <div class="logo-main">WEBSITES</div>
-                    <div class="logo-tagline">Enterprise Web Solutions</div>
+                    <div class="logo-main">LC DIGITAL</div>
+                    <div class="logo-tagline">Web • Apps • Digital Solutions</div>
                 </div>
             </a>
             
@@ -1181,7 +1068,6 @@
                 <li><a href="#about" class="nav-link">About Us</a></li>
                 <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#pricing" class="nav-link">Pricing</a></li>
                 <li><a href="#faq" class="nav-link">FAQ</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -1191,7 +1077,7 @@
     </nav>
 
     <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/27695698096?text=Hi%20LC%20Websites!%20I'm%20interested%20in%20building%20a%20website.%20Can%20we%20chat?" 
+    <a href="https://wa.me/27695698096?text=Hi%20LC%20Digital!%20I'm%20interested%20in building%20a%20website%20or%20app.%20Can%20we%20chat?" 
        class="whatsapp-float" 
        target="_blank" 
        rel="noopener noreferrer">
@@ -1202,10 +1088,10 @@
     <section class="hero">
         <div class="hero-bg"></div>
         <div class="container hero-content">
-            <span class="hero-badge">Premium Web Development</span>
-            <h1 class="hero-title">Transforming Vision Into Digital Excellence</h1>
-            <p class="hero-subtitle">Professional web solutions that drive business growth. We create stunning, high-performance websites tailored to your unique needs.</p>
-            <a href="#portfolio" class="cta-button">View Our Work</a>
+            <span class="hero-badge">Web & App Development</span>
+            <h1 class="hero-title">We Build Digital Products That Work</h1>
+            <p class="hero-subtitle">Professional digital solutions that drive business growth. We create stunning, high-performance websites tailored to your unique needs.</p>
+            <a href="#portfolio" class="cta-button">Explore Our Solutions</a>
         </div>
     </section>
 
@@ -1213,10 +1099,10 @@
     <section class="original-hero" id="home">
         <div class="original-hero-bg"></div>
         <div class="container original-hero-content">
-            <span class="original-hero-badge">Enterprise Web Development</span>
-            <h1 class="original-hero-title">LC Websites</h1>
-            <div class="original-hero-subtitle">Websites that work—turning ideas into websites, your vision in our code, bringing your business online.</div>
-            <p class="original-hero-description">Professional web development services creating premium, high-performance websites that drive business growth and establish digital excellence.</p>
+            <span class="original-hero-badge">Web & App Development</span>
+            <h1 class="original-hero-title">LC Digital</h1>
+            <div class="original-hero-subtitle">We design and develop websites, mobile apps, and digital systems that turn business ideas into reliable technology.</div>
+            <p class="original-hero-description">Professional web and app development services creating premium, high-performance websites that drive business growth and establish digital excellence.</p>
         </div>
     </section>
 
@@ -1232,45 +1118,50 @@
             <div class="about-content">
                 <div class="about-text">
                     <h2>Who We Are</h2>
-                    <p>LC Websites is a premium web development agency dedicated to transforming businesses through exceptional digital solutions. Founded with a passion for innovation and a commitment to excellence, we specialize in creating websites that not only look stunning but also deliver measurable results.</p>
+                    <p>LC Digital Websites, Apps & Digital Solutions is a development company focused on building reliable digital products for businesses, organizations and entrepreneurs. We combine modern development practices, thoughtful interface design and practical business thinking to create products that are built to perform.</p>
                     
                     <p>Our team combines technical expertise with creative vision to build websites that stand out in today's competitive digital landscape. We believe that every business deserves a powerful online presence, and we're here to make that happen.</p>
                     
-                    <p>At LC Websites, we don't just build websites—we build digital experiences that connect with your audience, showcase your brand, and drive business growth. From small startups to established enterprises, we tailor our approach to meet your unique needs and goals.</p>
+                    <p>We don't just build websites — we build digital experiences, applications and systems that solve problems, support customers and improve how businesses operate. Whether you need a company website, online store, booking system, school platform, business application or custom mobile app, we tailor the solution to your goals.</p>
                     
                     <div class="about-features">
                         <div class="feature-item">
                             <i class="fas fa-bullseye"></i>
                             <h4>Our Mission</h4>
-                            <p>To empower businesses with cutting-edge web solutions that drive growth and success in the digital world.</p>
+                            <p>To build useful, secure and scalable technology that helps businesses operate and grow.</p>
                         </div>
                         
                         <div class="feature-item">
                             <i class="fas fa-eye"></i>
                             <h4>Our Vision</h4>
-                            <p>To be the leading web development partner for businesses seeking transformative digital experiences.</p>
+                            <p>To become a trusted technology partner for businesses that want to turn ideas into working digital products.</p>
                         </div>
                         
                         <div class="feature-item">
                             <i class="fas fa-handshake"></i>
                             <h4>Our Values</h4>
-                            <p>Quality, innovation, transparency, and client success drive everything we do.</p>
+                            <p>Quality, innovation, transparency, reliability and client success guide every project.</p>
                         </div>
                         
                         <div class="feature-item">
                             <i class="fas fa-users"></i>
                             <h4>Our Approach</h4>
-                            <p>Collaborative, client-focused, and results-driven methodology for every project.</p>
+                            <p>We listen, plan, design, develop, test and deploy with the client involved throughout the process.</p>
+                        </div>
+                    </div>
+                </div>    
+                <div class="about-image">
+                    <div class="about-image-text">
+                        <div class="developer-mark">LC</div>
+                        <h3>LC DIGITAL</h3>
+                        <p style="color: white; font-size: 1.2rem;">Websites • Apps • Digital Solutions</p>
+                        <div class="code-lines">
+                            <span>&lt;build /&gt;</span>
+                            <span>design → develop → deploy</span>
+                            <span>technology for business</span>
                         </div>
                     </div>
                 </div>
-                
-					  <div class="about-image" style="background-image: url('hloni.jpg'); background-size: cover; background-position: center; min-height: 400px;">
-			<div class="about-image-text">
-				<h3>LC Websites</h3>
-				<p style="color: white; font-size: 1.2rem;">Turning your vision into digital reality</p>
-			</div>
-			</div>
             </div>
         </div>
     </section>
@@ -1280,8 +1171,8 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-label">Portfolio</span>
-                <h2 class="section-title">Our Featured Work</h2>
-                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.2rem;">Premium websites we've created for clients across industries.</p>
+                <h2 class="section-title">Selected Solutions</h2>
+                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.2rem;">A selection of digital products and solutions demonstrating our development capabilities.</p>
             </div>
             
             <div class="portfolio-grid" id="projectsContainer">
@@ -1296,71 +1187,24 @@
             <div class="section-header">
                 <span class="section-label">Information</span>
                 <h2 class="section-title">Frequently Asked Questions</h2>
-                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.2rem;">Get answers to common questions about our portfolio and services.</p>
+                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.2rem;">Get answers to common questions about our development process and digital solutions.</p>
             </div>
             
-            <div class="faq-container">
-                <div class="faq-item">
+            <div class="faq-container"><div class="faq-item">
                     <div class="faq-question">
-                        Which portfolio projects are real client websites?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>In our portfolio, we showcase both real client projects and conceptual demonstrations to illustrate our capabilities:</p>
-                        <ul style="margin-top: 1rem; padding-left: 1.5rem;">
-                            <li><strong>Real Client Projects:</strong> We have successfully delivered websites for various businesses including Tech Solutions Corp and Creative Agency Portfolio. These represent actual client work with measurable results.</li>
-                            <li><strong>Concept Demonstrations:</strong> Projects like "Boutique Fashion Store," "Educational Platform," and "Wellness Center Platform" are interactive demonstrations that showcase what we can build for similar businesses in your industry.</li>
-                        </ul>
-                        <p style="margin-top: 1rem;">The demonstration projects are fully functional previews that allow you to experience the quality and features we can deliver for your specific needs.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        What's the difference between demo and real projects?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>We maintain transparency about our portfolio composition:</p>
-                        <ul style="margin-top: 1rem; padding-left: 1.5rem;">
-                            <li><strong>Real Projects <span class="real-badge">LIVE</span>:</strong> These are actual client websites that are currently live and operational. They represent completed work with real businesses.</li>
-                            <li><strong>Demo Projects <span class="demo-badge">DEMO</span>:</strong> These are fully functional concept demonstrations that show our capabilities for specific industries. They're designed to give you a realistic preview of what we can create for your business.</li>
-                        </ul>
-                        <p style="margin-top: 1rem;">All projects, whether real or conceptual, demonstrate the same level of quality, attention to detail, and technical excellence that we deliver to every client.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        Can you create a website like the demo projects for my business?
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Absolutely! The demonstration projects serve as templates of what we can achieve for your business. Here's how it works:</p>
-                        <ul style="margin-top: 1rem; padding-left: 1.5rem;">
-                            <li><strong>Customization:</strong> We can adapt any demonstration to match your specific brand, content, and business requirements.</li>
-                            <li><strong>Industry Adaptation:</strong> Whether you need an e-commerce store, educational platform, or wellness center website, we can build it with the features demonstrated.</li>
-                            <li><strong>Enhanced Features:</strong> We can add or modify features based on your unique needs beyond what's shown in the demos.</li>
-                        </ul>
-                        <p style="margin-top: 1rem;">The demonstrations are starting points - we work with you to create a website that perfectly represents your brand and meets your business objectives.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        How do I get started with my own website project?
+                        How do I get started with my project?
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="faq-answer">
                         <p>Starting your website project with us is straightforward:</p>
                         <ol style="margin-top: 1rem; padding-left: 1.5rem;">
-                            <li><strong>Initial Consultation:</strong> Contact us to discuss your project requirements, timeline, and budget.</li>
-                            <li><strong>Proposal:</strong> We provide a detailed proposal based on your needs, referencing similar projects from our portfolio.</li>
+                            <li><strong>Initial Consultation:</strong> Contact us to discuss your goals, requirements, timeline, and technical needs.</li>
+                            <li><strong>Proposal:</strong> We define the scope, recommend the right technology, and provide a clear project proposal.</li>
                             <li><strong>Design Phase:</strong> We create custom designs for your approval, incorporating your brand identity.</li>
                             <li><strong>Development:</strong> Our team builds your website with regular updates and opportunities for feedback.</li>
                             <li><strong>Launch & Support:</strong> We launch your website and provide ongoing support and maintenance.</li>
                         </ol>
-                        <p style="margin-top: 1rem;">Ready to begin? <a href="#contact" style="color: var(--soft-pink); text-decoration: none;">Contact us today</a> for a free consultation and quote.</p>
+                        <p style="margin-top: 1rem;">Ready to begin? <a href="#contact" style="color: var(--soft-pink); text-decoration: none;">Contact us today</a> to discuss your project.</p>
                     </div>
                 </div>
             </div>
@@ -1373,7 +1217,7 @@
             <div class="section-header">
                 <span class="section-label">Our Expertise</span>
                 <h2 class="section-title">We Build All Types of Websites</h2>
-                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.2rem;">Comprehensive web solutions tailored to your business needs.</p>
+                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.2rem;">Comprehensive digital solutions tailored to your business needs.</p>
             </div>
             
             <div class="services-grid">
@@ -1515,107 +1359,70 @@
         </div>
     </section>
 
-    <!-- Pricing Section -->
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Pricing</span>
-                <h2 class="section-title">Website Prices</h2>
-                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.2rem;">Transparent pricing for premium website development.</p>
-            </div>
-            
-            <div class="pricing-grid">
-                <div class="price-card">
-                    <h3 class="price-title">1 – 3 Pages Website</h3>
-                    <div class="price-amount">R2500</div>
-                    <p style="color: var(--text-muted); margin-bottom: 2rem;">Perfect for small businesses and startups.</p>
-                    <a href="#contact" class="contact-btn" style="display: inline-block;">Get Started</a>
-                </div>
-                
-                <div class="price-card featured">
-                    <h3 class="price-title">3 – 5 Pages Website</h3>
-                    <div class="price-amount">R3200</div>
-                    <p style="color: var(--text-muted); margin-bottom: 2rem;">Most popular choice for growing businesses.</p>
-                    <a href="#contact" class="contact-btn" style="display: inline-block;">Get Started</a>
-                </div>
-                
-                <div class="price-card">
-                    <h3 class="price-title">5 – 8 Pages Website</h3>
-                    <div class="price-amount">R8500</div>
-                    <p style="color: var(--text-muted); margin-bottom: 2rem;">Comprehensive solution for established businesses.</p>
-                    <a href="#contact" class="contact-btn" style="display: inline-block;">Get Started</a>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- E-commerce Section -->
     <section class="ecommerce">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">E-commerce</span>
-                <h2 class="section-title">Online Store (E-commerce)</h2>
-                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.2rem;">Premium e-commerce solutions for your online business.</p>
+                <span class="section-label">Digital Commerce</span>
+                <h2 class="section-title">E-commerce Solutions</h2>
+                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.2rem;">Scalable online commerce platforms built for modern businesses.</p>
             </div>
             
             <div class="ecommerce-grid">
                 <div class="ecommerce-card">
-                    <div class="ecommerce-range">1 – 20 Products</div>
-                    <div class="ecommerce-price">R5500</div>
-                    <p style="color: var(--text-muted);">Perfect for small online stores</p>
+                    <div class="service-icon"><i class="fas fa-cart-shopping"></i></div>
+                    <h3 class="service-title">Online Stores</h3>
+                    <p class="service-description">Custom storefronts with product management, checkout flows, customer accounts and secure payment integrations.</p>
                 </div>
-                
                 <div class="ecommerce-card">
-                    <div class="ecommerce-range">20 – 60 Products</div>
-                    <div class="ecommerce-price">R7500</div>
-                    <p style="color: var(--text-muted);">Ideal for growing e-commerce</p>
+                    <div class="service-icon"><i class="fas fa-credit-card"></i></div>
+                    <h3 class="service-title">Payments & Orders</h3>
+                    <p class="service-description">Reliable payment, order and transaction workflows designed around your business processes.</p>
                 </div>
-                
                 <div class="ecommerce-card">
-                    <div class="ecommerce-range">60 + Products</div>
-                    <div class="ecommerce-price">R10 000+</div>
-                    <p style="color: var(--text-muted);">Enterprise e-commerce solutions</p>
+                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="service-title">Business Growth</h3>
+                    <p class="service-description">Fast, responsive and scalable commerce experiences built to support long-term growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>    
+    <!-- Additional Capabilities -->
+    <section class="extra-services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Additional Capabilities</span>
+                <h2 class="section-title">Built Around Your Business</h2>
+                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.2rem;">From initial concept to deployment, we provide the technical capabilities needed to build and maintain your digital product.</p>
+            </div>
+
+            <div class="extra-grid">
+                <div class="extra-card">
+                    <div class="service-icon"><i class="fas fa-cloud-arrow-up"></i></div>
+                    <h3 class="extra-title">Deployment & Hosting</h3>
+                    <p style="color: var(--text-muted); margin-top: 1rem;">Domain, hosting, deployment and production configuration.</p>
+                </div>
+                <div class="extra-card">
+                    <div class="service-icon"><i class="fas fa-envelope"></i></div>
+                    <h3 class="extra-title">Business Systems</h3>
+                    <p style="color: var(--text-muted); margin-top: 1rem;">Professional communication tools and integrations for your business.</p>
+                </div>
+                <div class="extra-card">
+                    <div class="service-icon"><i class="fas fa-arrows-rotate"></i></div>
+                    <h3 class="extra-title">Maintenance & Support</h3>
+                    <p style="color: var(--text-muted); margin-top: 1rem;">Updates, improvements, troubleshooting and ongoing technical support.</p>
+                </div>
+                <div class="extra-card">
+                    <div class="service-icon"><i class="fas fa-palette"></i></div>
+                    <h3 class="extra-title">UI & Brand Integration</h3>
+                    <p style="color: var(--text-muted); margin-top: 1rem;">Interfaces that connect your brand identity with a consistent digital experience.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Extra Services -->
-    <section class="extra-services">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Additional Services</span>
-                <h2 class="section-title">Extra Services</h2>
-                <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto; font-size: 1.2rem;">Enhance your website with our premium add-ons.</p>
-            </div>
-            
-            <div class="extra-grid">
-                <div class="extra-card">
-                    <h3 class="extra-title">Domain + Hosting Setup</h3>
-                    <div class="extra-price">R350</div>
-                    <p style="color: var(--text-muted); margin-top: 1rem;">Complete setup and configuration</p>
-                </div>
-                
-                <div class="extra-card">
-                    <h3 class="extra-title">Business Email Setup</h3>
-                    <div class="extra-price">R300</div>
-                    <p style="color: var(--text-muted); margin-top: 1rem;">Professional email accounts</p>
-                </div>
-                
-                <div class="extra-card">
-                    <h3 class="extra-title">Logo Design</h3>
-                    <div class="extra-price">R250</div>
-                    <p style="color: var(--text-muted); margin-top: 1rem;">Custom logo creation</p>
-                </div>
-                
-                <div class="extra-card">
-                    <h3 class="extra-title">Website Redesign/Fixing</h3>
-                    <div class="extra-price">From R800</div>
-                    <p style="color: var(--text-muted); margin-top: 1rem;">Website updates and fixes</p>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Modal -->
     <div class="modal" id="websiteModal">
@@ -1638,9 +1445,9 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <div class="footer-logo-text">LC WEBSITES</div>
-                    <p class="footer-tagline">Websites that work—turning ideas into websites, your vision in our code, bringing your business online.</p>
-                    <p style="color: var(--text-muted);">Enterprise web development solutions for businesses that demand excellence.</p>
+                    <div class="footer-logo-text">LC DIGITAL</div>
+                    <p class="footer-tagline">We design and develop websites, mobile apps, and digital systems that turn business ideas into reliable technology.</p>
+                    <p style="color: var(--text-muted);">Professional web, app, and digital development for businesses ready to build, grow, and scale.</p>
                 </div>
                 
                 <div class="footer-links">
@@ -1650,7 +1457,6 @@
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#services">Services</a></li>
-                        <li><a href="#pricing">Pricing</a></li>
                         <li><a href="#faq">FAQ</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -1667,13 +1473,13 @@
             </div>
             
             <div class="copyright">
-                <p>&copy;LC Websites. All rights reserved. | Portfolio includes both real client projects and conceptual demonstrations.</p>
+                <p>&copy; LC Digital Websites, Apps & Digital Solutions. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Portfolio Data with REAL WORKING demo websites
+        // Selected project data
         const projects = [
             
           
@@ -1682,40 +1488,24 @@
                 title: "dire-coatings",
                 type: "e-commerce",
                 description: "painting store, e-commerce.",
-                image: "paints.png",
                 websiteUrl: "https://dire-coatings.store",
                 tags: ["Creative", "painting store", "e-commerce"],
-                isDemo: false
-            },
-            {
-                id: 4,
-                title: "Wellness Center Platform",
-                type: "Booking Website",
-                description: "Complete wellness platform with practitioner scheduling and class bookings.",
-                image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                websiteUrl: " https://demo.wellnessliving.com", // WORKING WELLNESS DEMO
-                tags: ["Wellness", "Booking", "Scheduling", "Health"],
-                isDemo: true
             },
             {
                 id: 5,
                 title: "proposal-generator",
                 type: "Business Website",
                 description: "Corporate website for technology solutions company with service pages.",
-                image: "prop.png",
                 websiteUrl: "https://calvinlehlohonolo013-ui.github.io/proposal-generator",
                 tags: ["Business", "Corporate", "Technology"],
-                isDemo: false
             },
             {
                 id: 6,
                 title: "Educational Platform",
                 type: "EnglishHub Pro",
                 description: "Learning management system with courses and student dashboard.",
-                image: "eng.png",
                 websiteUrl: "https://calvinlehlohonolo013-ui.github.io/EnglishPro/",
                 tags: ["Education", "Learning", "Courses", "LMS"],
-                isDemo: false
             }
         ];
 
@@ -1736,20 +1526,15 @@
                 card.className = 'project-card';
                 
                 card.innerHTML = `
-                    <div class="project-image">
-                        <img src="${project.image}" alt="${project.title}">
-                    </div>
                     <div class="project-content">
                         <span class="project-type">${project.type}</span>
-                        <h3 class="project-title">${project.title}
-                            ${project.isDemo ? '<span class="demo-badge">DEMO</span>' : '<span class="real-badge">LIVE</span>'}
-                        </h3>
+                        <h3 class="project-title">${project.title}</h3>
                         <p class="project-description">${project.description}</p>
                         <div class="project-tags">
                             ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
                         </div>
                         <button class="contact-btn view-project" data-id="${project.id}" style="width: 100%;">
-                            ${project.isDemo ? 'View Demo' : 'View Live Website'} <i class="fas fa-external-link-alt" style="margin-left: 8px;"></i>
+                            View Project <i class="fas fa-external-link-alt" style="margin-left: 8px;"></i>
                         </button>
                     </div>
                 `;
@@ -1764,23 +1549,17 @@
                     const project = projects.find(p => p.id === projectId);
                     
                     if (project) {
-                        // Check if this is a working demo or placeholder
-                        if (project.isDemo && !project.websiteUrl.includes('your-')) {
-                            openModal(project);
-                        } else if (!project.isDemo && project.websiteUrl.includes('your-')) {
-                            // For placeholder real websites, show a message
-                            alert("This client website is currently being updated. Please check back soon or contact us to see similar work we've done.");
-                        } else {
-                            openModal(project);
-                        }
+                    if (project) {
+                        openModal(project);
                     }
+                }
                 });
             });
         }
         
         // Open Modal
         function openModal(project) {
-            modalTitle.textContent = project.title + (project.isDemo ? ' (Demo Preview)' : ' (Live Website)');
+            modalTitle.textContent = project.title;
             
             // Set the iframe source
             websiteFrame.src = project.websiteUrl;
@@ -1790,22 +1569,12 @@
                     <h4 style="color: var(--text-light); margin-bottom: 1rem; font-size: 1.3rem;">Project Details</h4>
                     <p style="margin-bottom: 0.5rem;">
                         <strong style="color: var(--soft-pink);">Type:</strong> ${project.type}
-                        ${project.isDemo ? ' <span class="demo-badge">CONCEPT DEMO</span>' : ' <span class="real-badge">LIVE CLIENT PROJECT</span>'}
                     </p>
                     <p style="margin-bottom: 0.5rem;"><strong style="color: var(--soft-pink);">Description:</strong> ${project.description}</p>
                     <p><strong style="color: var(--soft-pink);">Features:</strong> ${project.tags.join(', ')}</p>
-                    
-                    ${project.isDemo ? `
-                    <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(255, 193, 7, 0.1); border-radius: 8px; border-left: 4px solid #ffc107;">
-                        <p style="color: #ffc107; margin: 0; font-size: 0.9rem;">
-                            <i class="fas fa-info-circle"></i> This is a functional demonstration showcasing our capabilities for similar projects.
-                        </p>
-                    </div>
-                    ` : ''}
                 </div>
                 <div style="display: flex; gap: 1rem;">
-                    <a href="${project.websiteUrl}" target="_blank" style="flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 0.8rem; background: linear-gradient(135deg, var(--electric-purple), var(--hot-pink)); color: white; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem;">
-                        ${project.isDemo ? 'Open Demo in New Tab' : 'Open Website in New Tab'} <i class="fas fa-external-link-alt"></i>
+                    <a href="${project.websiteUrl}" target="_blank" style="flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 0.8rem; background: linear-gradient(135deg, var(--electric-purple), var(--hot-pink)); color: white; padding: 1rem 2rem; border-radius: 12px; text-decoration: none; font-weight: 600; font-size: 1.1rem;"> <i class="fas fa-external-link-alt"></i>
                     </a>
                 </div>
             `;
@@ -1874,8 +1643,6 @@
 </body>
 
 </html>
-
-
 
 
 
